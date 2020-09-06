@@ -1,0 +1,15 @@
+I=imread('apples.jpg');
+I=im2double(I);
+figure,imshow(I);title('Ô­À´');
+hsv=rgb2hsv(I);
+figure,imshow(hsv);title('HSV');
+H=hsv(:,:,1);
+S=hsv(:,:,2);
+V=hsv(:,:,3);
+subplot(2,3,1),imshow(H),title('H');
+subplot(2,3,2),imshow(S),title('S');
+subplot(2,3,3),imshow(V),title('V');
+subplot(2,3,4),imhist(H),title('H');
+subplot(2,3,5),imhist(V),title('S');
+subplot(2,3,6),imhist(S),title('V');
+vv=hsvquan(hsv);
